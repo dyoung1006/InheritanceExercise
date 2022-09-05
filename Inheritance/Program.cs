@@ -6,6 +6,7 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
+            #region Instructions
             // TODO Be sure to follow best practice when creating your classes
 
             // Create a class Animal
@@ -34,6 +35,32 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            #endregion
+
+            var myBird = new Bird();
+            myBird.WingColor = "Red";
+            myBird.CanFly = true;
+            myBird.DoMigrate = true;
+            myBird.BeakLength = 3.5;
+
+            var lizard = new Reptile()
+            {
+                IsColdBlooded = true,
+                IsScaly = true,
+                Habitat = "Swamp",
+                CanGrowTail = true
+            };
+
+            var myAnimals = new Animal[] { myBird, lizard };
+
+            foreach (var animal in myAnimals)
+            {
+                Console.WriteLine($"Alive:{animal.IsAlive}");
+                Console.WriteLine($"Age:{animal.Age} years old");
+                Console.WriteLine($"It has {animal.LegCount} legs");
+                Console.WriteLine($"It lives by {animal.LandSeaAir}");
+            }
+
         }
     }
 }
