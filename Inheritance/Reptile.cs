@@ -6,6 +6,11 @@ namespace Inheritance
 {
     public class Reptile: Animal
     {
+        public bool IsColdBlooded { get; set; }
+        public bool IsScaly { get; set; }
+        public string Habitat { get; set; }
+        public bool CanGrowTail { get; set; }
+
         public Reptile()
         {
             IsAlive = true;
@@ -13,11 +18,5 @@ namespace Inheritance
             LandSeaAir = "Land";
             Age = 0;
         }
-
-        public bool IsColdBlooded { get; set; }
-        public bool IsScaly { get; set; }
-        public string Habitat { get; set; }
-        public bool CanGrowTail { get; set; }
-        
     }
 }
